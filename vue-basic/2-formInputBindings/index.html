@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Basic</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app">
+        Name: <input type="text" v-model="name">
+        <br>
+        Animals :
+        <input type="checkbox" value="dog" v-model="animals">
+        <label for="">dog</label>
+        <input type="checkbox" value="cat" v-model="animals">
+        <label for="">cat</label>
+        <input type="checkbox" value="bird" v-model="animals">
+        <label for="">bird</label>
+        <br>
+        Gender:
+        <label for="">male</label>
+        <input type="radio" value="male" name="gender" v-model="gender">
+        <label for="">female</label>
+        <input type="radio" value="female" name="gender" v-model="gender"> 
+        <br>
+        Programming Language:
+        <select v-model="language">
+            <option disabled value="">Please Select</option>
+            <option>Javascript</option>
+            <option>JAVA</option>
+            <option>PHP</option>
+            <option>C#</option>
+        </select>
+
+        <hr>
+        <p>Name: {{name}}</p>
+        <p>animals: {{animals}}</p>
+        <p>Gender: {{gender}}</p>
+        <p>Programming Language: {{language}}</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

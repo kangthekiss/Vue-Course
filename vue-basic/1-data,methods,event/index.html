@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Basic</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <span v-if="seen">Hello World</span>
+        <p>{{course}}</p>
+        <p>{{getName()}}</p>
+        <p>{{setNickName('Kang')}}</p>
+        <p><a v-bind:href="website">{{website}}</a></p>
+        <p><input type="text" v-bind:value="name"></p>
+        <p><input type="number" v-bind:value="age" disabled></p>
+        <p>
+            <button type="button" v-on:click="addAge()">Add Age</button>
+            <button type="button" v-on:click="substractAge()">Substract Age</button>
+        </p>
+        <p>
+            {{count}} length: 
+            <input type="text" v-on:keyup="addCount()" v-on:keyup.enter="resetCount()">
+        </p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

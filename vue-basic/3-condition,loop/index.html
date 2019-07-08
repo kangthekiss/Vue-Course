@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Basic</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-if="like==false">
+            <button type="button" v-on:click="like=!like">Like</button>
+        </div>
+        <div v-else>
+            <button type="button" v-on:click="like=!like">UnLike</button>
+        </div>
+
+        <br>
+        Colors:
+        <ul>
+            <li v-for="color in colors">{{color}}</li>
+        </ul>
+
+        <br>
+        Employees:
+        <ul v-for="employee in employees">
+            <li>{{employee.name}}</li>
+            <li>{{employee.age}}</li>
+            <li>{{employee.gender}}</li>
+            <li>{{employee.salary}}</li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
